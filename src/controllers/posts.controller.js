@@ -24,6 +24,7 @@ const seleccionarPost = async(req, res, next)=>{
 }
 
 
+
 module.exports = {
     insertarPost,
     seleccionarPost

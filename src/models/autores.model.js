@@ -7,8 +7,13 @@ const select = (id)=>{
     return db.query('select * from autores where id = ?', [id])
 }
 
+const selectByAutor = (id)=>{
+    return db.query('select * from posts where autores_id = ?', [id])
+}
+
 
 module.exports = {
     select,
-    insert
+    insert,
+    selectByAutor
 }

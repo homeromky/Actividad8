@@ -1,6 +1,6 @@
 
-const insert = ({nombre,email,imagen})=>{
-    return db.query(`INSERT INTO autores (nombre, email,imagen) VALUES (?,?,?)`, [nombre,email,imagen]);
+const insert = ({nombre,email,imagen},{path})=>{
+    return db.query(`INSERT INTO autores (nombre, email,imagen) VALUES (?,?,?)`, [nombre,email,path]);
 }
 
 const select = (id)=>{

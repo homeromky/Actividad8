@@ -7,8 +7,8 @@ POST {{HOST}}/api/autores
 Content-Type: application/json
 
 {
-    "nombre": "Luis Roberto Lopez",
-    "email": "luis@gmail.com",
+    "nombre": "Pepe Lopez",
+    "email": "Pepe@gmail.com",
     "imagen": ""
 }
 
@@ -21,11 +21,11 @@ POST {{HOST}}/api/posts/
 Content-Type: application/json
 
 {
-    "titulo": "Final NBA",
-    "descripcion": "LUNES DE FINALES DE NBA",
+    "titulo": "Bandas de Rock",
+    "descripcion": "Las 10 mejores bandas de rock de MX",
     "fecha_creacion": "2024/05/31",
     "categoria": "Deportes",
-    "autores_id": "1"
+    "autores_id": "2"
 }
 
 ###
@@ -33,6 +33,6 @@ GET {{HOST}}/api/posts/1
 Content-Type: application/json
 
 ###
-GET {{HOST}}/api/autores/posts/1
+GET {{HOST}}/api/autores/posts/2
 Content-Type: application/json
 

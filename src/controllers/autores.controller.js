@@ -4,11 +4,9 @@ const Autores = require('../models/autores.model')
 
 const insertarAutor = async(req,res,next) =>{
 
-
-  
     try{
       
-            const result =  await Autores.insert(req.body);
+            const result =  await Autores.insert(req.body,req.file);
             res.json(result)
     }catch(err){
         next(err)

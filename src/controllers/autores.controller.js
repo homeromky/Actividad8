@@ -1,11 +1,9 @@
-const { get } = require('mongoose');
 const Autores = require('../models/autores.model')
 
 
 const insertarAutor = async(req,res,next) =>{
 
     try{
-      
             const result =  await Autores.insert(req.body,req.file);
             res.json(result)
     }catch(err){
@@ -15,7 +13,6 @@ const insertarAutor = async(req,res,next) =>{
 
 
 const seleccionarAutor = async(req, res, next)=>{
-   console.log(req.param);
     try{
         const {id} = req.params;
             const [[result]] =  await Autores.select(id)
@@ -26,7 +23,7 @@ const seleccionarAutor = async(req, res, next)=>{
 }
 
 const seleccionarPostbyAutor = async(req, res, next)=>{
-    console.log(req.param);
+ 
      try{
          const {id} = req.params;
              const [result] =  await Autores.selectByAutor(id)
